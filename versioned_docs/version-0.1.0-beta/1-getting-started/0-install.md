@@ -10,7 +10,7 @@ First, please check compatibility for your Minecraft version before installing t
 Compatible versions can be found [HERE][link_mcversions].
 
 Plese make sure to have the following mods installed aswell:
-- fabric-api *>= version*
+- fabric-api
 
 ## Installing
 

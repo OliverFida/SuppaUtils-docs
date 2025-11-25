@@ -1,0 +1,3 @@
+- Set docusaurus.config.ts -> presets -> docs -> includeCurrentVersion -> false
+- run docker build --target serve -t oliverfida/suppautils-docs:latest .
+- Set docusaurus.config.ts -> presets -> docs -> includeCurrentVersion -> true
