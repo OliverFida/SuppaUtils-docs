@@ -2,14 +2,15 @@
 
 [link_releases]: https://github.com/OliverFida/SuppaUtils/releases
 [link_features]: ../features/
+[link_mcversions]: ./supported-mcversions
 
 ## Requirements
 
 First, please check compatibility for your Minecraft version before installing the mod.<br/>
-Compatible versions can be found [HERE](./supported-mcversions).
+Compatible versions can be found [HERE][link_mcversions].
 
 Plese make sure to have the following mods installed aswell:
-- [fabric-api](#) *>= version*
+- fabric-api *>= version*
 
 ## Installing
 

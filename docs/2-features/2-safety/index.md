@@ -1,3 +1,3 @@
 # Safety Features
 
-- [Inventory Watcher](./safety/inventorywatcher)
+- [Inventory Watcher](./inventorywatcher)

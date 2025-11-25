@@ -1,3 +1,3 @@
 # Management Features
 
-- [Dimension-Locking](./management/dimension)
+- [Dimension-Locking](./dimension)

@@ -41,6 +41,7 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
+          includeCurrentVersion: false,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           // editUrl:
@@ -81,7 +82,7 @@ const config: Config = {
         src: 'img/logo.svg',
       },
       items: [
-        // {to: '/docs/getting-started', label: 'Getting Started', position: 'left'},
+        {to: '/docs/getting-started', label: 'Getting Started', position: 'left'},
         {
           type: 'docSidebar',
           sidebarId: 'documentationSidebar',
@@ -106,10 +107,10 @@ const config: Config = {
         {
           title: 'Docs',
           items: [
-            // {
-            //   label: 'Getting Started',
-            //   to: '/docs/getting-started',
-            // },
+            {
+              label: 'Getting Started',
+              to: '/docs/getting-started',
+            },
             {
               label: 'Features',
               to: '/docs/features',
