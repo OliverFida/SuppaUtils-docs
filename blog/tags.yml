@@ -1,0 +1,14 @@
+dev:
+  label: Development
+  permalink: /dev
+  description: Development Notes
+
+release:
+  label: Release
+  permalink: /release
+  description: Release Notes
+
+roadmap:
+  label: Roadmap
+  permalink: /roadmap
+  description: Roadmap
