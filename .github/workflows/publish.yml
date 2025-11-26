@@ -21,7 +21,7 @@ jobs:
               run: echo "$env:USERPROFILE\.bun\bin" | Out-File -FilePath $env:GITHUB_PATH -Encoding utf8 -Append
 
             - name: Install dependencies
-              run: bun install
+              run: bun install --no-cache
 
             - name: Build
               run: bun run build
