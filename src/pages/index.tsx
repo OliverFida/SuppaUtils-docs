@@ -23,6 +23,11 @@ function HomepageHeader() {
             to="/docs/getting-started/install">
             Install
           </Link>
+          <Link
+            className={clsx('button button--primary button--lg', styles.ml1)}
+            to="/download">
+            Download
+          </Link>
         </div>
       </div>
     </header>
