@@ -29,6 +29,9 @@ jobs:
             - name: Debug user
               run: whoami
 
+            - name: Use Docker Desktop Linux Engine
+              run: echo "DOCKER_HOST=npipe:////./pipe/dockerDesktopLinuxEngine" | Out-File -Append -Encoding utf8 $env:GITHUB_ENV
+
             - name: Log in to GHCR
               run: echo ${{ secrets.GHCR_PAT }} | docker login ghcr.io -u ${{ github.actor }} --password-stdin
 
