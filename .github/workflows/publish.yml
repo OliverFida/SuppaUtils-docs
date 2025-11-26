@@ -14,11 +14,11 @@ jobs:
               with:
                 node-version: 20
 
-            - name: Install Bun
-              run: curl -fsSL https://bun.sh/install | bash
+            - name: Install Bun (Windows)
+              run: powershell -Command "irm https://bun.sh/install.ps1 | iex"
 
             - name: Add Bun to PATH
-              run: echo "$HOME/.bun/bin" >> $GITHUB_PATH
+              run: echo "$env:USERPROFILE\.bun\bin" | Out-File -FilePath $env:GITHUB_PATH -Encoding utf8 -Append
 
             - name: Install dependencies
               run: bun install
