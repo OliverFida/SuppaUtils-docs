@@ -1,42 +1,56 @@
 name: Publish
 on: workflow_dispatch
+env:
+  REGISTRY: ghcr.io
+  IMAGE_NAME: ${{ github.repository }}
 
 jobs:
     build-n-publish:
         runs-on: self-hosted
-
+        permissions:
+          contents: read
+          packages: write
+          id-token: write
+        
         steps:
-            - name: Checkout
-              uses: actions/checkout@v4
+          - name: Checkout repo
+            uses: actions/checkout@v4
+
+          - name: Install cosign
+            uses: sigstore/cosign-installer@59acb6260d9c0ba8f4a2f9d9b48431a222b68e20 #v3.5.0
+            with:
+              cosign-release: 'v2.2.4'
+
+          - name: Setup Docker Buildx
+            uses: docker/setup-buildx-action@f95db51fddba0c2d1ec667646a06c2ce06100226 # v3.0.0
             
-            - name: Set up Node
-              uses: actions/setup-node@v4
-              with:
-                node-version: 20
-
-            - name: Install Bun (Windows)
-              run: powershell -Command "irm https://bun.sh/install.ps1 | iex"
-
-            - name: Add Bun to PATH
-              run: echo "$env:USERPROFILE\.bun\bin" | Out-File -FilePath $env:GITHUB_PATH -Encoding utf8 -Append
-
-            - name: Install dependencies
-              run: bun install --no-cache
-
-            # - name: Build
-            #   run: bun run build
-
-            - name: Debug user
-              run: whoami
-
-            - name: Use Docker Desktop Linux Engine
-              run: echo "DOCKER_HOST=npipe:////./pipe/dockerDesktopLinuxEngine" | Out-File -Append -Encoding utf8 $env:GITHUB_ENV
-
-            - name: Log in to GHCR
-              run: echo ${{ secrets.GHCR_PAT }} | docker login ghcr.io -u ${{ github.actor }} --password-stdin
-
-            - name: Build Docker image
-              run: docker build --target serve -t ghcr.io/oliverfida/suppautils-docs:latest .
-
-            - name: Push Docker image
-              run: docker push ghcr.io/oliverfida/suppautils-docs:latest
+          - name: Log into registry ${{ env.REGISTRY }}
+            uses: docker/login-action@343f7c4344506bcbf9b4de18042ae17996df046d # v3.0.0
+            with:
+              registry: ${{ env.REGISTRY }}
+              username: ${{ github.actor }}
+              password: ${{ secrets.GITHUB_TOKEN }}
+              
+          - name: Extract Docker metadata
+            id: meta
+            uses: docker/metadata-action@96383f45573cb7f253c731d3b3ab81c87ef81934 # v5.0.0
+            with:
+              images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+              
+          - name: Build and push Docker image
+            id: build-and-push
+            uses: docker/build-push-action@0565240e2d4ab88bba5387d719585280857ece09 # v5.0.0
+            with:
+              context: .
+              push: true
+              tags: ${{ steps.meta.outputs.tags }}
+              labels: ${{ steps.meta.outputs.labels }}
+              target: serve
+              cache-from: type=gha
+              cache-to: type=gha,mode=max
+                
+          - name: Sign the published Docker image
+            env:
+              TAGS: ${{ steps.meta.outputs.tags }}
+              DIGEST: ${{ steps.build-and-push.outputs.digest }}
+            run: echo "${TAGS}" | xargs -I {} cosign sign --yes {}@${DIGEST}
