@@ -12,6 +12,7 @@ Also breaking the chest will be prohibited. TNT or Creepers (and so on) will ?no
   Unlocks the chest, the player is looking at.
 
 ### Admin-Commands
+- **`/suppa qol enable/disable chestlock`**
 - **`/suppa qol config chestlock max <amount>`**<br/>
   **Example:** /suppa qol config chestlock max 5
 - **`/unlock`**<br/>

@@ -5,9 +5,9 @@ Configurable initials are displayed in front of the players name.<br />
 
 ## Commands
 ### Admin-Commands
-- **`/suppa initials add \<player\> \<initials\>`**<br />
+- **`/suppa initials add <player> <initials>`**<br />
   **Example:** /suppa initials add XortiX_ORG OF
-- **`/suppa initials remove \<player\>`**<br />
+- **`/suppa initials remove <player>`**<br />
   **Example:** /suppa initials remove XortiX_ORG
 
 ## Default Config

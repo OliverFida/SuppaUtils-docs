@@ -10,6 +10,7 @@ Also, a chat message gets sent, if configured.
   Flags the player as AFK immediately
 
 ### Admin-Commands
+- **`/suppa qol enable/disable afk`**
 - **`/suppa qol config afk timeout <seconds>`**<br />
   **Example:** /suppa qol config afk timeout 300
 

@@ -29,6 +29,8 @@ Both commands have a configurable cooldown.
 - **`/back`**
 
 ### Admin-Commands
+- **`/suppa qol enable/disable spawn`**
+- **`/suppa qol enable/disable homes`**
 - **`/suppa qol config homes cooldown <seconds>`**<br/>
   **Example:** /suppa qol config homes cooldown 30
 - **`/suppa qol config homes countdown <seconds>`**<br/>
