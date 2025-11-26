@@ -2,34 +2,20 @@ import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
-// This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
-
 const config: Config = {
   title: 'SuppaUtils',
   tagline: 'All-In-One Minecraft Server Management Tool',
   favicon: 'img/favicon.ico',
-
-  // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
-    v4: true, // Improve compatibility with the upcoming Docusaurus v4
+    v4: true,
   },
-
-  // Set the production url of your site here
   url: 'https://suppautils.workofthe.day',
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
 
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'OliverFida', // Usually your GitHub org/user name.
-  projectName: 'SuppaUtils', // Usually your repo name.
+  organizationName: 'OliverFida',
+  projectName: 'SuppaUtils',
 
   onBrokenLinks: 'throw',
-
-  // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
@@ -42,10 +28,6 @@ const config: Config = {
         docs: {
           sidebarPath: './sidebars.ts',
           includeCurrentVersion: false,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          // editUrl:
-          //   'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         blog: {
           showReadingTime: true,
@@ -53,11 +35,6 @@ const config: Config = {
             type: ['rss', 'atom'],
             xslt: true,
           },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          // editUrl:
-          //   'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-          // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
           onUntruncatedBlogPosts: 'warn',
@@ -82,6 +59,7 @@ const config: Config = {
         src: 'img/logo.svg',
       },
       items: [
+        {to: '/download', label: 'Download', position: 'left'},
         {to: '/docs/getting-started', label: 'Getting Started', position: 'left'},
         {
           type: 'docSidebar',
@@ -121,12 +99,25 @@ const config: Config = {
           title: 'More',
           items: [
             {
+              label: 'Download',
+              to: '/download',
+            },
+            {
               label: 'Blog',
               to: '/blog',
             },
+          ],
+        },
+        {
+          title: 'Code',
+          items: [
             {
               label: 'GitHub',
               href: 'https://github.com/OliverFida/SuppaUtils',
+            },
+            {
+              label: 'GitHub (website)',
+              href: 'https://github.com/OliverFida/SuppaUtils-docs',
             },
           ],
         },

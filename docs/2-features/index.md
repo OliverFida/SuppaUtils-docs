@@ -17,3 +17,5 @@ Here's a quick overview of all the available features.
 ## [Safety Features](./safety)
 
 - [Inventory Watcher](./safety/inventorywatcher)
+- [Block-Logger](./safety/block-logger)
+- [Connection-Logger](./safety/connection-logger)
