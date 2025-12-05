@@ -1,3 +1,5 @@
+- Run bun run docusaurus docs:version \<version\>
+  - Example: bun run docusaurus docs:version 0.1.0-beta
 - Ensure docusaurus.config.ts -> presets -> docs -> includeCurrentVersion == false
 - ~~run docker build --target serve -t ghcr.io/oliverfida/suppautils-docs:latest .~~
 - run "Publish" workflow

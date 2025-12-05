@@ -5,6 +5,7 @@ Configurable initials are displayed in front of the players name.<br />
 
 ## Commands
 ### Admin-Commands
+- **`/suppa qol enable/disable initials`**
 - **`/suppa initials add <player> <initials>`**<br />
   **Example:** /suppa initials add XortiX_ORG OF
 - **`/suppa initials remove <player>`**<br />
@@ -16,4 +17,6 @@ Configurable initials are displayed in front of the players name.<br />
 ## Version History
 - **Introduced in** v0.1.0-beta
 - **v0.2.0-beta**:
+  - Added commands.
+- **v0.3.0-beta**:
   - Added configurability using commands.
