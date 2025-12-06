@@ -1,8 +1,8 @@
 # AFK
 ## Description
-After 5 minutes of no movement and no chat messages, a player gets flagged as AFK.<br />
+After a configured time of no movement and no chat messages, a player gets flagged as AFK.<br />
 In the player list, a `[AFK]` tag is added, and the player is shown in gray.<br />
-Also, a chat message gets sent.
+Also, a chat message gets sent, if configured.
 
 ## Commands
 ### Player-Commands
@@ -15,7 +15,7 @@ Also, a chat message gets sent.
   **Example:** /suppa qol config afk timeout 300
 
 ## Default Config
-- **enabled:** true
+- **enabled:** false
 - **timeout:** 300 seconds (5 minutes)
 
 ## Version History

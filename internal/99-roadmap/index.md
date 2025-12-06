@@ -54,3 +54,15 @@
 |**STATUS**|**Planned Release**|
 |:-:|:-:|
 |TODO|???|
+
+#### `Block-Logger`
+
+|**STATUS**|**Planned Release**|
+|:-:|:-:|
+|TODO|???|
+
+#### `Connection-Logger`
+
+|**STATUS**|**Planned Release**|
+|:-:|:-:|
+|TODO|???|

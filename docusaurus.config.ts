@@ -2,6 +2,8 @@ import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
+const isDev = process.env.NODE_ENV === 'development';
+
 const config: Config = {
   title: 'SuppaUtils',
   tagline: 'All-In-One Minecraft Server Management Tool',
@@ -27,7 +29,7 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          includeCurrentVersion: false,
+          includeCurrentVersion: isDev,
         },
         blog: {
           showReadingTime: true,
@@ -46,6 +48,22 @@ const config: Config = {
     ],
   ],
 
+  plugins: [
+    ...(isDev
+      ? [
+        [
+          '@docusaurus/plugin-content-docs',
+          {
+            id: 'internal',
+            path: 'internal',
+            routeBasePath: 'internal',
+            sidebarPath: './sidebars.ts',
+          },
+        ],
+      ]
+    : []),
+  ],
+
   themeConfig: {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
@@ -59,6 +77,17 @@ const config: Config = {
         src: 'img/logo.svg',
       },
       items: [
+        ...(isDev
+          ? [
+            {
+              type: 'docSidebar',
+              sidebarId: 'internalSidebar',
+              label: 'Internal Docs',
+              docsPluginId: 'internal',
+              position: 'left',
+            } as const,
+          ]
+        : []),
         {to: '/download', label: 'Download', position: 'left'},
         {to: '/docs/getting-started', label: 'Getting Started', position: 'left'},
         {
