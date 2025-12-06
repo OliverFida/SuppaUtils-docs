@@ -12,13 +12,13 @@
 
 |**STATUS**|**Planned Release**|
 |:-:|:-:|
-|WIP|v0.1.0-beta|
+|DONE|v0.1.0-beta|
 
 #### `AFK`
 
 |**STATUS**|**Planned Release**|
 |:-:|:-:|
-|WIP|v0.1.0-beta|
+|DONE|v0.1.0-beta|
 
 
 #### `Playtime Ranking`
@@ -32,7 +32,7 @@
 
 |**STATUS**|**Planned Release**|
 |:-:|:-:|
-|TODO|v0.2.0-beta|
+|TODO|v0.4.0-beta|
 
 
 #### `Chest-Lock`
