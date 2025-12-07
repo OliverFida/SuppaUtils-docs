@@ -8,6 +8,7 @@ Initials are displayed in front of the players name.<br />
 - **`/suppa qol enable/disable initials`**
 
 ## Default Config
+- **enabled:** false
 - **Initials List:** Gets loaded from a config file at `unrekt.at`
 
 ## Version History

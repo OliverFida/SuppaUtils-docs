@@ -4,7 +4,10 @@
 - **`Config Database (SQLite)`** - WIP
   - Including Migrations
   - Including Default Values
-- **`Player- & Admin-Commands`** - TODO
+- **`Player- & Admin-Commands`** - WIP
+- **`Config Export & Import`** - TODO
+  - In .json format?
+  - For fast configuration outside Minecraft
 
 ## Features
 ### QOL Features (Quality-Of-Life)
@@ -28,25 +31,32 @@
 |TODO|???|
 
 
-#### `Spawn / Homes`
+#### `Homes`
 
 |**STATUS**|**Planned Release**|
 |:-:|:-:|
-|TODO|v0.4.0-beta|
+|WIP|v0.4.0-beta|
+
+
+#### `Spawn`
+
+|**STATUS**|**Planned Release**|
+|:-:|:-:|
+|WIP|v0.4.0-beta|
 
 
 #### `Chest-Lock`
 
 |**STATUS**|**Planned Release**|
 |:-:|:-:|
-|TODO|???|
+|WIP|v0.4.0-beta|
 
 ### Management Features
 #### `Dimension-Lock`
 
 |**STATUS**|**Planned Release**|
 |:-:|:-:|
-|TODO|???|
+|WIP|v0.4.0-beta|
 
 ### Safety Features
 #### `Inventory Watcher`

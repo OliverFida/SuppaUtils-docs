@@ -7,7 +7,8 @@ Here's a quick overview of all the available features.
 - [Initials](./qol/initials)
 - [AFK](./qol/afk)
 - [Playtime Ranking](./qol/playtime)
-- [Spawn / Homes](./qol/homes)
+- [Homes](./qol/homes)
+- [Spawn](./qol/spawn)
 - [Chest-Lock](./qol/chestlock)
 
 ## [Management Features](./management)

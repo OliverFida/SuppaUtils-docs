@@ -3,6 +3,11 @@ dev:
   permalink: /dev
   description: Development Notes
 
+beta:
+  label: Beta-Release
+  permalink: /beta
+  description: Beta-Release Notes
+
 release:
   label: Release
   permalink: /release

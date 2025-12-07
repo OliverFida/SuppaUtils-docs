@@ -33,6 +33,7 @@ If a player already has initials, they get updated from the file.
 After successful import, the file gets renamed to `suppautils-initials_done.csv`, so it wont get imported again.
 
 ## Default Config
+- **enabled:** false
 - **Initials List:** empty
 
 ## Version History
