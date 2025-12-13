@@ -1,3 +1,4 @@
+- Try bun run build
 - Run bun run docusaurus docs:version \<version\>
   - Example: bun run docusaurus docs:version 0.1.0-beta
 - Push to GitHub
