@@ -9,6 +9,9 @@ Here's a quick overview of all the available features.
 - [Playtime Ranking](./qol/playtime)
 - [Homes](./qol/homes)
 - [Spawn](./qol/spawn)
+- [TPA](./qol/tpa)
+- [Warps](./qol/warp)
+- [Back](./qol/back)
 - [Chest-Lock](./qol/chestlock)
 
 ## [Management Features](./management)

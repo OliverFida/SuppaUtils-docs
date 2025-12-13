@@ -74,7 +74,7 @@ const config: Config = {
       title: 'SuppaUtils',
       logo: {
         alt: 'SuppaUtils Logo',
-        src: 'img/logo.svg',
+        src: 'img/logo.png',
       },
       items: [
         ...(isDev

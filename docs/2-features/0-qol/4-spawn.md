@@ -21,9 +21,6 @@ Both commands have a configurable cooldown.
 
 ## Default Config
 - **enabled:** false
-- **cooldown:** 30 (seconds)
-- **countdown:** 5 (seconds)
-- **interDim:** false
 
 ## Version History
 - **Introduced in** v0.4.0-beta
